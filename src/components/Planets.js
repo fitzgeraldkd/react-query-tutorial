@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Planet from './Planet';
 
 const fetchPlanets = async ({ queryKey }) => {
-  const [_key, page] = queryKey;
+  const [, page] = queryKey;
   const res = await fetch(`https://swapi.dev/api/planets/?page=${page}`);
   return res.json();
 };
